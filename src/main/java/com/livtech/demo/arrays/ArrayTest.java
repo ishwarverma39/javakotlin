@@ -6,12 +6,11 @@ public class ArrayTest {
 
 	public static void main(String[] args) {
 		rotation();
-
 	}
 
 	static void rotation() {
 		int[] arr = { 1, 2, 3, 4, 5, 6, 7 };
-		// oneByOne(arr, 3);
+		oneByOneMethod(arr, 3);
 		reversalMethod(arr, 3);
 		System.out.println("time complexity " + timeComplexity);
 		ArrayUtils.printArray(arr);

@@ -42,9 +42,13 @@ public class GraphDemo {
 
     public int getUnvisitedAdjNode(int v) {
         for (int i = 0; i < vCount; i++) {
-            if (!visited[i] && adjMatrix[v][i] == 1) return i;
+            if (isNotVisited(v, i)) return i;
         }
         return -1;
+    }
+
+    public boolean isNotVisited(int s, int d) {
+        return !visited[d] && adjMatrix[s][d] == 1;
     }
 
     public void dfs() {
@@ -75,7 +79,7 @@ public class GraphDemo {
             int v = queue.remove();
             displayVertex(v);
             for (int i = 0; i < vCount; i++) {
-                if (!visited[i] && adjMatrix[v][i] == 1) {
+                if (isNotVisited(v, i)) {
                     visited[i] = true;
                     queue.add(i);
                 }
@@ -89,14 +93,14 @@ public class GraphDemo {
     public static void main(String[] args) {
         char[] vertices = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'};
         GraphDemo graph = new GraphDemo(8, vertices);
-        graph.addEdge(0, 1);
-        graph.addEdge(1, 2);
-        graph.addEdge(1, 7);
-        graph.addEdge(2, 3);
-        graph.addEdge(2, 4);
-        graph.addEdge(4, 5);
-        graph.addEdge(4, 6);
-        graph.addEdge(4, 7);
+        graph.addEdge(0, 1); //A -> B
+        graph.addEdge(1, 2); //B -> C
+        graph.addEdge(1, 7); //B -> H
+        graph.addEdge(2, 3); //C -> D
+        graph.addEdge(2, 4); //C -> E
+        graph.addEdge(4, 5); //E -> F
+        graph.addEdge(4, 6); //E -> G
+        graph.addEdge(4, 7); //E -> H
         graph.dfs();
         graph.bfs();
     }

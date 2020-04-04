@@ -4,13 +4,16 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;
 
-public class GraphDemo {
+/**
+ * This class uses adjacency matrix for graph representation
+ */
+public class GraphAMatrix {
     int[][] adjMatrix;
     int vCount;
     char[] vertices;
     boolean[] visited;
 
-    public GraphDemo(int vCount, char[] vertices) {
+    public GraphAMatrix(int vCount, char[] vertices) {
         this.vCount = vCount;
         this.vertices = vertices;
         this.adjMatrix = new int[vCount][vCount];
@@ -51,6 +54,10 @@ public class GraphDemo {
         return !visited[d] && adjMatrix[s][d] == 1;
     }
 
+    /**
+     * DFS traversing in the graph is similar to the pre-order traversing in the B-tree
+     * Time complexity is O(V+E)
+     */
     public void dfs() {
         System.out.println("====DFS Traverse== starts\n");
         Stack<Integer> stack = new Stack<>();
@@ -70,6 +77,10 @@ public class GraphDemo {
         System.out.println("\n\n====DFS Traverse== ends");
     }
 
+    /**
+     * BFS traversing is similar to the level order traversing in the tree
+     * Time complexity is O(V+E)
+     */
     public void bfs() {
         System.out.println("====BFS Traverse== starts\n");
         Queue<Integer> queue = new LinkedList<>();
@@ -92,7 +103,7 @@ public class GraphDemo {
 
     public static void main(String[] args) {
         char[] vertices = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'};
-        GraphDemo graph = new GraphDemo(8, vertices);
+        GraphAMatrix graph = new GraphAMatrix(8, vertices);
         graph.addEdge(0, 1); //A -> B
         graph.addEdge(1, 2); //B -> C
         graph.addEdge(1, 7); //B -> H

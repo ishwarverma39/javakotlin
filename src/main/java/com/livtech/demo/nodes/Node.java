@@ -1,9 +1,9 @@
 package com.livtech.demo.nodes;
 
-public class SimpleNode {
+public class Node {
 
 	private int data;
-	private SimpleNode next = null;
+	private Node next = null;
 
 	public int getData() {
 		return data;
@@ -13,11 +13,11 @@ public class SimpleNode {
 		this.data = data;
 	}
 
-	public SimpleNode getNext() {
+	public Node getNext() {
 		return next;
 	}
 
-	public void setNext(SimpleNode next) {
+	public void setNext(Node next) {
 		this.next = next;
 	}
 }

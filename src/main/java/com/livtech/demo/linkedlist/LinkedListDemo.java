@@ -1,7 +1,7 @@
 package com.livtech.demo.linkedlist;
 
 
-import com.livtech.demo.nodes.SimpleNode;
+import com.livtech.demo.nodes.Node;
 
 import java.util.ArrayList;
 
@@ -10,7 +10,7 @@ public class LinkedListDemo {
 	static int timeComplexity = 0;
 
 	public static void main(String[] args) {
-		SimpleNode head = new SimpleNode();
+		Node head = new Node();
 		head.setData(1);
 		 insertNodes(head); System.out.println("\n Nodes in list ");
 		  traverseList(head);
@@ -25,64 +25,64 @@ public class LinkedListDemo {
 		//findLoopUsingFastAndSlowPointer(head);
 	}
 
-	static void createListWithLoop(SimpleNode head) {
-		SimpleNode node1 = new SimpleNode();
+	static void createListWithLoop(Node head) {
+		Node node1 = new Node();
 		node1.setData(2);
 		head.setNext(node1);
 
-		SimpleNode node2 = new SimpleNode();
+		Node node2 = new Node();
 		node2.setData(3);
 		node1.setNext(node2);
 
-		SimpleNode node3 = new SimpleNode();
+		Node node3 = new Node();
 		node3.setData(4);
 		node2.setNext(node3);
 
-		SimpleNode node4 = new SimpleNode();
+		Node node4 = new Node();
 		node4.setData(5);
 		node3.setNext(node4);
 
-		SimpleNode node5 = new SimpleNode();
+		Node node5 = new Node();
 		node5.setData(6);
 		node4.setNext(node5);
 
-		SimpleNode node6 = new SimpleNode();
+		Node node6 = new Node();
 		node6.setData(7);
 		node5.setNext(node6);
 
 		node6.setNext(node4);
 	}
 
-	static void insertNodes(SimpleNode head) {
-		SimpleNode node1 = new SimpleNode();
+	static void insertNodes(Node head) {
+		Node node1 = new Node();
 		node1.setData(2);
 		head.setNext(node1);
 
-		SimpleNode node2 = new SimpleNode();
+		Node node2 = new Node();
 		node2.setData(3);
 		node1.setNext(node2);
 
-		SimpleNode node3 = new SimpleNode();
+		Node node3 = new Node();
 		node3.setData(4);
 		node2.setNext(node3);
 
-		SimpleNode node4 = new SimpleNode();
+		Node node4 = new Node();
 		node4.setData(5);
 		node3.setNext(node4);
 
-		SimpleNode node5 = new SimpleNode();
+		Node node5 = new Node();
 		node5.setData(6);
 		node4.setNext(node5);
 
-		SimpleNode node6 = new SimpleNode();
+		Node node6 = new Node();
 		node6.setData(7);
 		node5.setNext(node6);
 
 		node6.setNext(null);
 	}
 
-	static void traverseList(SimpleNode head) {
-		SimpleNode temp = head;
+	static void traverseList(Node head) {
+		Node temp = head;
 		while (temp != null) {
 			System.out.print(" " + temp.getData());
 			temp = temp.getNext();
@@ -92,16 +92,16 @@ public class LinkedListDemo {
 	/*
 	 * time complexity is O(n)
 	 */
-	static SimpleNode reverseOfList(SimpleNode head) {
+	static Node reverseOfList(Node head) {
 		timeComplexity = 0;
 		if (head == null) {
 			return head;
 		}
-		SimpleNode temp = head.getNext();
+		Node temp = head.getNext();
 		head.setNext(null);
 		while (temp != null) {
 			timeComplexity++;
-			SimpleNode temp1 = temp.getNext();
+			Node temp1 = temp.getNext();
 			temp.setNext(head);
 			head = temp;
 			temp = temp1;
@@ -111,8 +111,8 @@ public class LinkedListDemo {
 		return head;
 	}
 
-	static void middleNode(SimpleNode head) {
-		SimpleNode slow = head, fast = head;
+	static void middleNode(Node head) {
+		Node slow = head, fast = head;
 		timeComplexity = 0;
 		while (fast != null) {
 			timeComplexity++;
@@ -130,10 +130,10 @@ public class LinkedListDemo {
 
 	}
 
-	static void nthNodeFromEnd(SimpleNode head, int n) {
+	static void nthNodeFromEnd(Node head, int n) {
 		timeComplexity = 0;
 		int count = 0;
-		SimpleNode slow = head, fast = head;
+		Node slow = head, fast = head;
 		while (fast != null) {
 			timeComplexity++;
 			count++;
@@ -148,13 +148,13 @@ public class LinkedListDemo {
 				+ timeComplexity);
 	}
 
-	static void findLoopUsingArray(SimpleNode head) {
+	static void findLoopUsingArray(Node head) {
 		timeComplexity = 0;
-		ArrayList<SimpleNode> nodeList = new ArrayList<SimpleNode>();
+		ArrayList<Node> nodeList = new ArrayList<Node>();
 		boolean isLoop = false;
 		if (head == null)
 			return;
-		SimpleNode temp = head;
+		Node temp = head;
 		while (temp != null) {
 			timeComplexity++;
 			if (nodeList.contains(temp)) {
@@ -177,12 +177,12 @@ public class LinkedListDemo {
 				+ timeComplexity);
 	}
 
-	static void findLoopUsingFastAndSlowPointer(SimpleNode head) {
+	static void findLoopUsingFastAndSlowPointer(Node head) {
 		timeComplexity = 0;
 		boolean isLoop = false;
 		if (head == null)
 			return;
-		SimpleNode fast = head, slow = head;
+		Node fast = head, slow = head;
 		while (slow != null && fast != null && fast.getNext() != null) {
 			timeComplexity++;
 			fast = fast.getNext().getNext();

@@ -33,8 +33,8 @@ public class MergeSortTest {
 	static void merge(int arr[], int l, int m, int r) {
 
 		int n1 = m - l + 1, n2 = r - m;
-		int a[] = new int[n1];
-		int b[] = new int[n2];
+		int[] a = new int[n1];
+		int[] b = new int[n2];
 
 		for (int i = 0; i < n1; i++) {
 			a[i] = arr[l + i];

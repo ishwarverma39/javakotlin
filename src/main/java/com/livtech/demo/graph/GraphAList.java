@@ -20,8 +20,30 @@ public class GraphAList {
         this.vertices = vertices;
     }
 
+
+    public int getVCount() {
+        return vCount;
+    }
+
+    public LinkedList<Integer>[] getList() {
+        return list;
+    }
+
+    public boolean isVisited(int v) {
+        return visited[v];
+    }
+
+    public void makeVisited(int v) {
+        visited[v] = true;
+    }
+
     public void addEdge(int u, int v) {
+        addEdge(u, v, true);
+    }
+
+    public void addEdge(int u, int v, boolean directed) {
         list[u].add(v);
+        if (!directed) list[v].add(u);
     }
 
     public void display(int v) {

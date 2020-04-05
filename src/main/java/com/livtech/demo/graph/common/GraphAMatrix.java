@@ -1,4 +1,4 @@
-package com.livtech.demo.graph;
+package com.livtech.demo.graph.common;
 
 import java.util.LinkedList;
 import java.util.Queue;

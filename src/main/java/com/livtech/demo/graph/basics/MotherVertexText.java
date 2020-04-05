@@ -1,4 +1,6 @@
-package com.livtech.demo.graph;
+package com.livtech.demo.graph.basics;
+
+import com.livtech.demo.graph.common.GraphAList;
 
 /**
  * Mother vertex is such a vertex in the directed graph that all other vertices can by reached by a path from that

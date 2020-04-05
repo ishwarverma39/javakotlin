@@ -1,6 +1,6 @@
-package com.livtech.demo.graph;
+package com.livtech.demo.graph.basics;
 
-import java.util.Arrays;
+import com.livtech.demo.graph.common.GraphAList;
 
 public class KCoreGraph {
 

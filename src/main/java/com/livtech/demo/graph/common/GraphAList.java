@@ -1,14 +1,13 @@
-package com.livtech.demo.graph;
+package com.livtech.demo.graph.common;
 
-import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Queue;
 
 public class GraphAList {
     private final LinkedList<Integer>[] list;
     private final int vCount;
-    private final boolean visited[];
-    private final char vertices[];
+    private final boolean[] visited;
+    public final char[] vertices;
 
     public GraphAList(int vCount, char[] vertices) {
         this.vCount = vCount;
@@ -52,6 +51,10 @@ public class GraphAList {
 
     public void makeUnvisited() {
         for (int i = 0; i < vCount; i++) visited[i] = false;
+    }
+
+    public void makeUnvisited(int i) {
+        visited[i] = false;
     }
 
     public void DFS(int v) {

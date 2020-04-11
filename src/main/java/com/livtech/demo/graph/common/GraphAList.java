@@ -58,15 +58,27 @@ public class GraphAList {
     }
 
     public void DFS(int v) {
+        for (int i = 0; i < vCount; i++) {
+            if (!isVisited(i)) DFSUtils(i);
+        }
+    }
+
+    private void DFSUtils(int v) {
         visited[v] = true;
         display(v);
         for (Integer next : list[v]) {
             if (!visited[next])
-                DFS(next);
+                DFSUtils(next);
         }
     }
 
     public void BFS(int v) {
+        for (int i = 0; i < vCount; i++) {
+            if (!isVisited(i)) BFSUtils(i);
+        }
+    }
+
+    private void BFSUtils(int v) {
         Queue<Integer> queue = new LinkedList<>();
         queue.add(v);
         while (!queue.isEmpty()) {

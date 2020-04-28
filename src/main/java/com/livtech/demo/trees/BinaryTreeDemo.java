@@ -1,4 +1,4 @@
-package com.livtech.demo.trees.tree;
+package com.livtech.demo.trees;
 
 
 import com.livtech.demo.nodes.BTNode;
@@ -53,20 +53,26 @@ public class BinaryTreeDemo {
 
     }
 
-    static void printPath(BTNode node, BTNode[] path, int pathlen) {
+    /**
+     * All paths from root node to each leaves node
+     * @param node current node
+     * @param path path till the current node
+     * @param pathLen position to add the current node
+     */
+    static void printPath(BTNode node, BTNode[] path, int pathLen) {
         if (node == null)
             return;
         else {
-            path[pathlen++] = node;
+            path[pathLen++] = node;
         }
 
         if (node.getLeft() == null && node.getRight() == null) {
             System.out.print("\npath ");
-            for (int i = 0; i < pathlen; i++)
+            for (int i = 0; i < pathLen; i++)
                 System.out.print(" " + path[i].getData());
         } else {
-            printPath(node.getLeft(), path, pathlen);
-            printPath(node.getRight(), path, pathlen);
+            printPath(node.getLeft(), path, pathLen);
+            printPath(node.getRight(), path, pathLen);
         }
     }
 

@@ -1,4 +1,4 @@
-package com.livtech.demo.trees.tree;
+package com.livtech.demo.trees;
 
 
 import com.livtech.demo.nodes.BTNode;

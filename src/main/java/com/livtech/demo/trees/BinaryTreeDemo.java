@@ -345,8 +345,8 @@ public class BinaryTreeDemo {
 
     static void levelOrderTraversingSpiralForm(BTNode root) {
         System.out.println("\nLeve order in spiral form");
-        BTNode leftStack[] = new BTNode[10];
-        BTNode rightStack[] = new BTNode[10];
+        BTNode[] leftStack = new BTNode[10];
+        BTNode[] rightStack = new BTNode[10];
         int leftTop = -1;
         int rightTop = -1;
         if (root == null) {
@@ -364,7 +364,7 @@ public class BinaryTreeDemo {
                     rightStack[++rightTop] = leftStack[leftTop].getRight();
                 }
                 leftTop--;
-            } else if (rightTop != -1) {
+            } else {
                 System.out.print(" " + rightStack[rightTop].getData());
                 if (rightStack[rightTop].getRight() != null) {
                     leftStack[++leftTop] = rightStack[rightTop].getRight();

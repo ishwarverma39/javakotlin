@@ -9,7 +9,7 @@ public class MinEleSortedAndRotated {
 	}
 
 	static int min(int l, int r, int[] a) {
-		int m = (l + r);
+		int m = (l + r)/2;
 		if (r == l + 1) {
 			return a[r] < a[l] ? r : l;
 		} else if (a[m - 1] > a[m] && a[m] < a[m + 1])

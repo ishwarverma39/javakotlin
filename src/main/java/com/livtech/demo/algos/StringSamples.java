@@ -46,15 +46,13 @@ public class StringSamples {
 
 	static void ReplaceSpaces() {
 		String s1 = "a b      cde ff";
-		String strs[] = s1.split(" ");
+		String[] strs = s1.split(" ");
 		System.out.println("\n no of strings " + strs.length);
 		s1 = "";
 		for (String s : strs) {
 			if (!s.isEmpty())
 				s1 = s1 + s + " ";
 		}
-		s1.trim();
-		System.out.println(s1);
-
+		System.out.println(s1.trim());
 	}
 }

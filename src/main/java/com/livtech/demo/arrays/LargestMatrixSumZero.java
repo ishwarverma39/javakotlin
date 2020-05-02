@@ -22,7 +22,7 @@ public class LargestMatrixSumZero {
 		sumZeroMatrix(arr,r,c);
 	}
 
-	static boolean sumZero(int temp[], int starti, int endj, int n) {
+	static boolean sumZero(int[] temp, int starti, int endj, int n) {
 		HashMap<Integer, Integer> presum = new HashMap<>();
 		int sum = 0;
 		int max_length = Integer.MAX_VALUE;
@@ -56,8 +56,8 @@ public class LargestMatrixSumZero {
 		return (max_length != 0);
 	}
 
-	static void sumZeroMatrix(int a[][], int row, int col) {
-		int temp[] = new int[row];
+	static void sumZeroMatrix(int[][] a, int row, int col) {
+		int[] temp = new int[row];
 		// Variables to store the final output
 		int fup = 0, fdown = 0, fleft = 0, fright = 0;
 		int up = 0, down = 0;

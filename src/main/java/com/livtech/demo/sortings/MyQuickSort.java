@@ -11,9 +11,9 @@ public class MyQuickSort {
 
     private void quickSort(int[] a, int low, int high) {
         if (low < high) {
-            int piovt = partition(a, low, high);
-            quickSort(a, low, piovt - 1);
-            quickSort(a, piovt + 1, high);
+            int pivot = partition(a, low, high);
+            quickSort(a, low, pivot - 1);
+            quickSort(a, pivot + 1, high);
         }
     }
 
@@ -32,7 +32,7 @@ public class MyQuickSort {
                 }
                 left++;
             }
-            // to get small number tha pivot when iterating form right to left
+            // to get small number than pivot when iterating form right to left
             while (left < right) {
                 if (a[right] < pivot) {
                     swap(a, left, right);
@@ -50,5 +50,4 @@ public class MyQuickSort {
         a[l] = a[r];
         a[r] = temp;
     }
-
 }

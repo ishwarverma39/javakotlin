@@ -1,6 +1,6 @@
-package com.livtech.demo.algos;
+package com.livtech.demo.sortings;
 
-public class MergeSortTest {
+public class MergeSortTest2 {
 
 	/**
 	 * @param args

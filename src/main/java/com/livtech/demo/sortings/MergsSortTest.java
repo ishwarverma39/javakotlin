@@ -4,7 +4,7 @@ public class MergsSortTest {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int arr[] = { 9,4,6,2,8,3,1,5,7 };
+		int[] arr = { 9,4,6,2,8,3,1,5,7 };
 
 		System.out.println("Given Array");
 		printArray(arr);
@@ -50,7 +50,7 @@ public class MergsSortTest {
 			} else if (i < s1) {
 				arr[k] = a[i];
 				i++;
-			} else if (j < s2) {
+			} else {
 				arr[k] = b[j];
 				j++;
 			}
@@ -58,10 +58,8 @@ public class MergsSortTest {
 		}
 	}
 
-	static void printArray(int arr[]) {
-		int n = arr.length;
-		for (int i = 0; i < n; ++i)
-			System.out.print(arr[i] + " ");
+	static void printArray(int[] arr) {
+		for (int value : arr) System.out.print(value + " ");
 		System.out.println();
 	}
 

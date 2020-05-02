@@ -4,7 +4,7 @@ public class DigitalClocK {
 
 	public static void main(String[] args) {
 
-		final int lcd_segment[][] =
+		final int[][] lcd_segment =
 		    {
 		        { 1, 1, 1, 0, 1, 0, 0, 1, 0, 1, 1, 1 }, // 0
 		        { 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0 }, // 1
@@ -18,11 +18,11 @@ public class DigitalClocK {
 		        { 1, 1, 1, 0, 1, 1, 1, 0, 0, 1, 1, 1 }, // 9
 		    };
 
-		    final char segment_c[] = new String("--|||--|||--").toCharArray();
-		    final char segment_x[] = { 1, 3, 0, 2, 4, 1, 3, 0, 2, 4, 1, 3 };
-		    final char segment_y[] = { 0, 0, 1, 1, 1, 2, 2, 3, 3, 3, 4, 4 };
+		    final char[] segment_c = "--|||--|||--".toCharArray();
+		    final char[] segment_x = { 1, 3, 0, 2, 4, 1, 3, 0, 2, 4, 1, 3 };
+		    final char[] segment_y = { 0, 0, 1, 1, 1, 2, 2, 3, 3, 3, 4, 4 };
 
-		    char display[][]=new char[5][5];
+		    char[][] display =new char[5][5];
 
 		    for (int digit = 0; digit < 10; digit++)
 		    {
@@ -49,9 +49,6 @@ public class DigitalClocK {
 		            System.out.print("\n");
 		        }
 		    }
-
-		    
-
 	}
 
 }

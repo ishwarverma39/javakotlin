@@ -92,12 +92,12 @@ public class NumberToString {
 	 * this method prints the numbers for each place value
 	 */
 	private static void printIndianWords(ArrayList<String> nums) {
-		String word = "";
+		StringBuilder word = new StringBuilder();
 		for (int i = 0; i < nums.size(); i++) {
-			int num = Integer.valueOf(nums.get(i));
+			int num = Integer.parseInt(nums.get(i));
 			// if number at any place-value is 0 then no need to print
 			if (num != 0) {
-				word = getTwoDigitWord(num) + placeValues[i] + " " + word;
+				word.insert(0, getTwoDigitWord(num) + placeValues[i] + " ");
 			}
 		}
 		System.out.println(word);
@@ -107,12 +107,12 @@ public class NumberToString {
 	 * this method prints the numbers for each place value
 	 */
 	private static void printUniversalWords(ArrayList<String> nums) {
-		String word = "";
+		StringBuilder word = new StringBuilder();
 		for (int i = 0; i < nums.size(); i++) {
-			int num = Integer.valueOf(nums.get(i));
+			int num = Integer.parseInt(nums.get(i));
 			// if number at any place-value is 0 then no need to print
 			if (num != 0) {
-				word = getThreeDigitWord(num) + uniPlaceValues[i] + " " + word;
+				word.insert(0, getThreeDigitWord(num) + uniPlaceValues[i] + " ");
 			}
 		}
 		System.out.println(word);

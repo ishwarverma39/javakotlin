@@ -1,4 +1,4 @@
-package com.livtech.demo.gc;
+package com.livtech.demo.java.gc;
 
 // Java program to demonstrate requesting
 // JVM to run Garbage Collector 

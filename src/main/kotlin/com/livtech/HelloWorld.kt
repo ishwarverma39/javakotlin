@@ -2,7 +2,6 @@ package com.livtech
 
 fun main() {
     HellWorld().foo()
-
 }
 
 class HellWorld {

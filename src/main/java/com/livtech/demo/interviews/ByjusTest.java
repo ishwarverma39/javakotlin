@@ -1,4 +1,4 @@
-package com.example;
+package com.livtech.demo.interviews;
 
 public class ByjusTest {
     public static void main(String[] args) {
@@ -91,10 +91,11 @@ public class ByjusTest {
         System.out.println("");
     }
 
-    /**
+    /** Remove duplicate elements from an array without extra space
      * {3, 4, 2, 3, 8, 2, 2}
      * <p>
      * {3, 4, 2, 8}
      */
+
 
 }

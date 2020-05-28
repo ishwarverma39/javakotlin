@@ -3,7 +3,7 @@ package com.livtech.demo.datastructure.graph.basics;
 import com.livtech.demo.datastructure.graph.common.GraphAList;
 
 /**
- * Mother vertex is such a vertex in the directed graph that all other vertices can by reached by a path from that
+ * Mother vertex is such a vertex in the directed graph that all other vertices can be reached by a path from that
  * vertex
  */
 public class MotherVertexText {

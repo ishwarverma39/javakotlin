@@ -2,6 +2,9 @@ package com.livtech
 
 fun main() {
     HellWorld().foo()
+    var a = arrayOf(1,2,3)
+    a.size
+    a.isEmpty()
 }
 
 class HellWorld {

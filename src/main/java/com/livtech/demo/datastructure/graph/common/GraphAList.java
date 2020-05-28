@@ -28,6 +28,10 @@ public class GraphAList {
         return list;
     }
 
+    public LinkedList<Integer> getAdjacencyList(int v){
+        return list[v];
+    }
+
     public boolean isVisited(int v) {
         return visited[v];
     }

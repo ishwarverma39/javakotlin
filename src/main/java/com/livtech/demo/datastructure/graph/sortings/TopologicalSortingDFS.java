@@ -4,18 +4,18 @@ import com.livtech.demo.datastructure.graph.common.GraphAList;
 
 import java.util.Stack;
 
-public class TopologicalSorting {
+public class TopologicalSortingDFS {
 
     public static void main(String[] args) {
-        char[] vertices = {'0','1','2', '3','4','5'};
+        char[] vertices = {'0', '1', '2', '3', '4', '5'};
         GraphAList g = new GraphAList(vertices.length, vertices);
-        g.addEdge(2,3);
+        g.addEdge(2, 3);
         g.addEdge(3, 1);
         g.addEdge(4, 0);
         g.addEdge(4, 1);
         g.addEdge(5, 0);
         g.addEdge(5, 2);
-        TopologicalSorting sorting = new TopologicalSorting();
+        TopologicalSortingDFS sorting = new TopologicalSortingDFS();
         sorting.topologicalSort(g);
     }
 
